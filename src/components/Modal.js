@@ -8,7 +8,7 @@ const Modal = ({ isOpen, onClose }) => {
     >
       <div className="modal-content relative md:w-2/4 w-3/4 rounded-md bg-white p-6 ">
     
-        <p className='font-bold text-xl '>Thank you for registering for our Online Webinar!  
+        <p className='font-bold text-xl  '><span className='text-green-500'>Thank you</span> for registering for our Online Webinar!  
           </p>
            <RxCross2 className='absolute top-1 text-black font-bold cursor-pointer right-2' size={20} onClick={onClose} />
 

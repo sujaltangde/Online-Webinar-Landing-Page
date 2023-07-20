@@ -1,20 +1,33 @@
 import React, { useState } from 'react'
 import Modal from './Modal';
+import { PiWarningCircleBold } from 'react-icons/pi'
 
 export const Main = () => {
 
-    const [name,setName] = useState("")
-    const [email,setEmail] = useState("")
-    const [com,setCom] = useState("")
+    const [notify, setNoti] = useState(false)
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [com, setCom] = useState("")
 
     const [modalOpen, setModalOpen] = useState(false);
 
     const handleOpenModal = (e) => {
         e.preventDefault()
-        setModalOpen(true);
-        setName("") ;
-        setEmail("") ;
-        setCom("") ;
+        if (name === "" || email === "" || com === "") {
+            setNoti(true);
+        }
+        else {
+            setModalOpen(true);
+            setName("");
+            setEmail("");
+            setCom("");
+        }
+
+        setTimeout(() => {
+            setNoti(false)
+        }, 2000)
+
+
     };
 
     const handleCloseModal = () => {
@@ -44,7 +57,17 @@ export const Main = () => {
                         </div>
 
                     </div>
-                    
+
+                    {
+                        notify && (<div class='bg-red-600 fixed flex-row flex left-0'>
+                        <div class='bg-red-600 rounded-r-md px-3  py-2 top-16 font-bold text-white fixed opacity-75 flex items-center'>
+                          Please fill all the inputs! 
+                          <span class='ml-2'><PiWarningCircleBold /></span>
+                        </div>
+                      </div>
+                      )
+                    }
+
 
                     <Modal isOpen={modalOpen} onClose={handleCloseModal} />
 
@@ -54,9 +77,11 @@ export const Main = () => {
 
                             <h3 className='md:text-5xl text-4xl   text-gray-800 text-center font-bold'>Register now </h3>
 
-                            <input value={name}  onChange={(e)=>setName(e.target.value)} placeholder='Full Name' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1 ' type="text" name="Name" id="" />
-                            <input value={email}  onChange={(e)=>setEmail(e.target.value)} placeholder='Email Address' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1 ' type="text" name="Name" id="" />                           
-                            <input value={com}  onChange={(e)=>setCom(e.target.value)} placeholder='Organization/Company' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1' type="text" name="Name" id="" />
+                            <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Full Name' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1 ' type="text" name="Name" id="" />
+
+                            <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email Address' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1 ' type="text" name="Name" id="" />
+
+                            <input value={com} onChange={(e) => setCom(e.target.value)} placeholder='Organization/Company' className=' border border-gray-600 border-x-0 border-t-0 outline-none px-2 py-1' type="text" name="Name" id="" />
 
                             <div className='flex justify-center items-center'>
                                 <button className='bg-purple-500 w-2/3 py-2 font-bold rounded-md  text-white' >Register</button>
