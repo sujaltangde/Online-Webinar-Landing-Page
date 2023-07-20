@@ -34,7 +34,7 @@ export const Navbar = () => {
                 </div>
                 <div className={`${toggle ? 'flex' : 'hidden'}`}>
 
-                        <ul className='flex fixed py-4 pl-5 flex-col gap-5 bg-gray-800 font-bold min-w-full text-white justify-center opacity-80 items-center border border-x-0 border-b-0 border-t-white  '>
+                        <ul className='flex fixed py-4 pl-5 flex-col gap-5 bg-gray-800 font-bold min-w-full text-white justify-center opacity-90 items-center border border-x-0 border-b-0 border-t-white  '>
                         <Link className='cursor-pointer' to='Main' smooth={true} offset={100} duration={500} >Webinar Details</Link>
                         <Link className='cursor-pointer' to='Main' smooth={true} offset={100} duration={500} >Register Now</Link>
                         <Link className='cursor-pointer' to='Main2' smooth={true} offset={100} duration={500} >Agenda</Link>

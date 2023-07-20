@@ -4,11 +4,11 @@ export const Main2 = () => {
     return (
         <>
 
-            <div id='Main2' className='bg-white min-h-screen md:pt-0 pt-24'>
+            <div id='Main2' className='bg-gradient-to-b from-black to-blue-800 text-white min-h-screen md:pt-0 pt-24'>
                 <div className='flex md:flex-row flex-col '>
                     <div className='flex flex-col md:px-20 px-5'>
-                        <div className='font-bold md:text-5xl text-4xl md:pb-6 pt-0 pb-6'>
-                            <p className='underline' > Agenda </p>
+                        <div className='font-bold md:text-5xl text-4xl md:pb-6 pt-0 flex pb-6'>
+                           <p className='underline' > Agenda </p>
                         </div>
 
                         <ul className='md:text-xl text-lg font-bold md:py-4 py-0 pb-2 flex flex-col gap-3'>
@@ -36,7 +36,7 @@ export const Main2 = () => {
                 </div>
 
                 <div className='md:px-40 px-5 md:py-6 md:pt-12 py-3 pt-14 '>
-                    <p className='text-gray-800 font-semibold text-center ' >Embrace the digital marketing revolution with our engaging agenda! Explore "Introduction to Digital Marketing," SEO, Social Media Marketing, and Email Marketing insights. Elevate your marketing game with practical 30-minute sessions. Secure your spot now!</p>
+                    <p className='text-gray-200 font-semibold text-center ' >Embrace the digital marketing revolution with our engaging agenda! Explore "Introduction to Digital Marketing," SEO, Social Media Marketing, and Email Marketing insights. Elevate your marketing game with practical 30-minute sessions. Secure your spot now!</p>
                 </div>
                 
             </div>

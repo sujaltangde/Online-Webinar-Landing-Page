@@ -10,7 +10,7 @@ export const Footer = () => {
         <>
 
             <div>
-                <div id='Contact' className='text-black md:px-24 px-3 bg-gray-200 font-bold'>
+                <div id='Contact' className='text-white md:px-24 px-3 bg-gray-800 font-bold'>
 
                     <div>
                         <p className='py-2 text-xl underline'> Contact Us:</p>
@@ -22,11 +22,11 @@ export const Footer = () => {
 
                        <div className='flex justify-left gap-5 py-4 '>
 
-                       <BsFacebook size={25}/> 
-                       <GrInstagram size={25}/> 
-                       <GrTwitter size={25}/> 
-                       <AiFillLinkedin size={25}/> 
-                       <BiLogoGmail size={25}/>
+                       <BsFacebook className='cursor-pointer' size={25}/> 
+                       <GrInstagram  className='cursor-pointer'size={25}/> 
+                       <GrTwitter className='cursor-pointer' size={25}/> 
+                       <AiFillLinkedin className='cursor-pointer' size={25}/> 
+                       <BiLogoGmail className='cursor-pointer' size={25}/>
 
                       
                        </div>
