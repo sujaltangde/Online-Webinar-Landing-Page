@@ -1,0 +1,26 @@
+[
+    {
+        "key":1,
+        "image":"Sarah.avif",
+        "name":"Dr. Emily Carter",
+        "pos":"AI Research Scientist"        
+    },
+    {
+        "key":2,
+        "image":"Robert.avif",
+        "name":"Alex Johnson",
+        "pos":"Tech Innovator & Data Analyst"        
+    },
+    {
+        "key":3,
+        "image":"Emma.avif",
+        "name":"Sarah Patel",
+        "pos":"Ethical AI Specialist"        
+    },
+    {
+        "key":4,
+        "image":"John.avif",
+        "name":"Michael Thompson",
+        "pos":"Robotics & AI Engineer "        
+    }
+]
